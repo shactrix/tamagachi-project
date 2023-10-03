@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemonotchi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header>
@@ -12,27 +12,33 @@
         <h2 id="name"></h2>
         <h2 id="age">0</h2>
     </header>
-    <div id="statsText">
-        <ul>
-            <li id="food">Hunger</li>
-            <li id="sleep">Sleepiness</li>
-            <li id="bored">Boredom</li>
-        </ul>
+    <div>
+        <div id="statsText">
+            <ul>
+                <li id="food">Hunger</li>
+                <li id="sleep">Sleepiness</li>
+                <li id="bored">Boredom</li>
+            </ul>
+        </div>
+        <div id="statsLevel">
+            <ul>
+                <li id="foodLevel">10</li>
+                <li id="sleepLevel">10</li>
+                <li id="boredLevel">10</li>
+            </ul>
+        </div>
+        <div id="image">
+            <img src="/assets/squirtle.png" class = "squirtle">
+            <img src="/assets/wartortle.jpg" class = "wartortle">
+            <img src="/assets/blastoise.png" class = "blastoise">
+        </div>
+        <div id="buttons">
+            <button id="foodButton">feed!</button>
+            <button id="sleepButton">sleep!</button>
+            <button id="funButton">entertain!</button>
+        </div>
     </div>
-    <div id="statsLevel">
-        <ul>
-            <li id="foodLevel">10</li>
-            <li id="sleepLevel">10</li>
-            <li id="boredLevel">10</li>
-        </ul>
-    </div>
-    <div id="image">image</div>
-    <div id="buttons">
-        <button id="foodButton">feed!</button>
-        <button id="sleepButton">sleep!</button>
-        <button id="funButton">entertain!</button>
-    </div>
-    <script type="text/javascript" src="tama.js"></script>
+    <script type="text/javascript" src="/js/tama.js"></script>
 
 </body>
 

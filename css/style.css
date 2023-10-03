@@ -4,3 +4,10 @@ body{
     display: flex;
     align-items: center;    
 }
+img.squirtle{
+    max-width: 200px;
+}
+
+#gameOver{
+    display: none
+}
