@@ -55,7 +55,30 @@ function increaseAge() {
     document.getElementById('age').innerHTML = newPet.age
     console.log(`${petName.name} has aged. Age: ${petName.age}`);
 } setInterval(increaseAge, 3000)
+  
 
+function feedPet(){
+    newPet.hunger++
+    document.getElementById("foodLevel").innerHTML = newPet.hunger
+}
+
+function sleepPet(){
+    newPet.sleepiness++
+    document.getElementById("sleepLevel").innerHTML = newPet.sleepiness
+}
+
+function entertainPet(){
+    newPet.boredom++
+    document.getElementById("boredLevel").innerHTML = newPet.boredom
+}
+
+const foodButton = document.getElementById("foodButton")
+foodButton.addEventListener("click", feedPet) 
+
+const sleepButton = document.getElementById("sleepButton")
+sleepButton.addEventListener("click", sleepPet)
+
+const funButton = document.getElementById("funButton") 
+funButton.addEventListener("click", entertainPet)
 
 })
-  
