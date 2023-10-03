@@ -18,40 +18,41 @@ nameId.innerHTML = `${petName}`
 
     // Feed the Tamagotchi, decreasing hunger
 function getHungry() {
-    this.hunger--;
+    newPet.hunger--;
     document.getElementById("foodLevel").innerHTML = newPet.hunger
-    if (this.hunger <= 5) {
+    if (newPet.hunger === 5) {
         alert('FEED ME!')
     } else if(newPet.hunger === 0){
         alert(`${petName} starved to death :C `)
     }
-} setInterval(getHungry, 1000)
+} setInterval(getHungry, 3000)
 
 // Put the Tamagotchi to sleep, decreasing sleepiness
 function getSleepy() {
-    this.sleepiness--;
+    newPet.sleepiness--;
     document.getElementById("sleepLevel").innerHTML = newPet.sleepiness
-    if (this.sleepiness <= 5) {
+    if (newPet.sleepiness === 5) {
         alert(`I'm tired of this grandpa!!!`)
     } else if(newPet.sleepiness === 0){
         alert(`${petName} died of exhaustion :C `)
     }
-} setInterval(getSleepy, 1000)
+} setInterval(getSleepy, 3000)
 
 // Play with the Tamagotchi, decreasing boredom
 function getBored() {
-    this.boredom--;
+    newPet.boredom--;
     document.getElementById("boredLevel").innerHTML = newPet.boredom
-    if (this.boredom <= 5) {
+    if (newPet.boredom === 5) {
         alert('I am so very very very bored.')
     } else if(newPet.boredom === 0){
         alert(`${petName} died of boredom :C `)
     }
-} setInterval(getBored, 1000)
+} setInterval(getBored, 3000)
 
 // Increase the age of the Tamagotchi
 function increaseAge() {
-    this.age++;
+    newPet.age++;
+    document.getElementById('age').innerHTML = newPet.age
     console.log(`${petName.name} has aged. Age: ${petName.age}`);
 } setInterval(increaseAge, 3000)
 
