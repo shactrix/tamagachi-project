@@ -43,6 +43,8 @@ li{
     margin: auto;
     justify-content: center;
     display: flex;
+    padding: 10px;
+    margin: 10px;
 }
 img.squirtle{
     max-width: 200px;
@@ -51,27 +53,27 @@ img.squirtle{
     position: fixed;
 }
 img.wartortle{
-    max-width: 400px;
+    max-width: 380px;
     visibility: hidden;
-    z-index: 1;
+    z-index: 0;
     position: fixed;
 }
 img.blastoise{
     max-width: 300px;
     visibility: hidden;
-    z-index: 1;
+    z-index: 0;
     position: fixed;
 }
 #buttons{
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
     text-align: center;
     width: 100%;
+    margin: 20px;
     padding: 30px; 
     word-spacing: 30px;
-}
-button{
-
+  
+   
 }
 #statsLevel{
     word-spacing: 70px;

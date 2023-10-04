@@ -25,6 +25,10 @@ function getHungry() {
     } else if(newPet.hunger === 0){
         alert(`${petName} starved to death :C `)
         gameOver()
+    } else if (newPet.hunger >9){
+        document.getElementById("foodButton").style.cursor = "not-allowed"
+        document.getElementById("foodButton").style.background = "rgb(67, 67, 67)"
+        document.getElementById("foodButton").style.pointerEvent = "none"
     }
 } setInterval(getHungry, 3000)
 
@@ -32,29 +36,30 @@ function getHungry() {
 function getSleepy() {
     newPet.sleepiness--;
     document.getElementById("sleepLevel").innerHTML = newPet.sleepiness
-    // if (newPet.sleepiness === 5) {
-    //     alert(`I'm tired of this grandpa!!!`)
-    // } else if(newPet.sleepiness === 0){
-    //     alert(`${petName} died of exhaustion :C `)
-    // }
+    if (newPet.sleepiness === 5) {
+        alert(`I'm tired of this grandpa!!!`)
+    } else if(newPet.sleepiness === 0){
+        alert(`${petName} died of exhaustion :C `)
+    }
 } setInterval(getSleepy, 3000)
 
 // Play with the Tamagotchi, decreasing boredom
 function getBored() {
     newPet.boredom--;
     document.getElementById("boredLevel").innerHTML = newPet.boredom
-    // if (newPet.boredom === 5) {
-    //     alert('I am so very very very bored.')
-    // } else if(newPet.boredom === 0){
-    //     alert(`${petName} died of boredom :C `)
-    // }
+    if (newPet.boredom === 5) {
+        alert('I am so very very very bored.')
+    } else if(newPet.boredom === 0){
+        alert(`${petName} died of boredom :C `)
+    }
 } setInterval(getBored, 3000)
 
 // Increase the age of the Tamagotchi
 function increaseAge() {
     newPet.age++;
     document.getElementById('age').innerHTML = newPet.age
-    console.log(`${petName.name} has aged. Age: ${petName.age}`);
+    evolvePet()
+    // console.log(`${newPet.name} has aged. Age: ${newPet.age}`);
 } setInterval(increaseAge, 3000)
   
 
@@ -84,10 +89,16 @@ funButton.addEventListener("click", entertainPet)
 
 function evolvePet(){
     let age = newPet.age
-    if (age === 10) {
+    if (age === 7) {
         alert(`I'm evolving!`)
+        document.querySelector(".squirtle").style.visibility = "hidden"
+        document.querySelector(".wartortle").style.visibility = "visible"
+    } else if(age === 14){
+        alert(`I'm evolving!`)
+        document.querySelector(".wartortle").style.visibility = "hidden"
+        document.querySelector(".blastoise").style.visibility = "visible"
     }
-}
+} 
 
 function gameOver(){
     window.location.href = "gameover.html";
