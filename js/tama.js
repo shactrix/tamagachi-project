@@ -90,7 +90,8 @@ function evolvePet(){
 }
 
 function gameOver(){
-    document.location.replace("/Users/shactrix/Desktop/sei-821/projects/tamagotchi/gameover.html")
+    window.location.href = "gameover.html";
+    // document.location.replace("/Users/shactrix/Desktop/sei-821/projects/tamagotchi/gameover.html")
 }
 
 })

@@ -1,13 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch&family=Lexend&family=Pixelify+Sans&family=Shadows+Into+Light&display=swap');
+
+
 body{
     background-color: yellowgreen;
+    /* font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Chakra Petch', sans-serif; */
+    font-family: 'Lexend', sans-serif;
+    /* font-family: 'Pixelify Sans', cursive;
+    font-family: 'Shadows Into Light', cursive;   */
+}
+header {
+    text-align: center;
+}
+h1{
+    font-family: 'Pixelify Sans', cursive;
+    font-size: 70px;
+}
+h2{
+    display: inline;
+    padding: 50px;
+}
+#name{
+    font-family: 'Shadows Into Light', cursive; 
+    font-size: 50px;
+}
+#age{
+    font-size: 50px;
+}
+ul{
+    list-style: none;
+    text-align: center;
+    word-spacing: 30%;
+    font-size: 20px;
+}
+li{
+    display: inline;
+    padding: 20px;
+    text-align: center;
+    justify-self: center;
+}
+#image{
+    margin: auto;
     justify-content: center;
     display: flex;
-    align-items: center;    
 }
 img.squirtle{
     max-width: 200px;
+    visibility: visible;
+    z-index: 0;
+    position: fixed;
 }
+img.wartortle{
+    max-width: 400px;
+    visibility: hidden;
+    z-index: 1;
+    position: fixed;
+}
+img.blastoise{
+    max-width: 300px;
+    visibility: hidden;
+    z-index: 1;
+    position: fixed;
+}
+#buttons{
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    width: 100%;
+    padding: 30px; 
+    word-spacing: 30px;
+}
+button{
 
-#gameOver{
-    display: none
+}
+#statsLevel{
+    word-spacing: 70px;
 }
