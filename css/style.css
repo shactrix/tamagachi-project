@@ -9,6 +9,10 @@ body{
     /* font-family: 'Pixelify Sans', cursive;
     font-family: 'Shadows Into Light', cursive;   */
 }
+#audioButton{
+    position: fixed;
+    top: 10px;
+}
 header {
     text-align: center;
 }

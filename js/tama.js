@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
+
 class Tamagotchi {
     constructor(name) {
       this.name = name;
@@ -16,6 +17,38 @@ const nameId = document.getElementById("name")
 nameId.innerHTML = `${petName}`
 
 
+// let audio = document.getElementById("audio")
+// audio.play()
+
+const audio = document.getElementById("audio");
+
+// window.addEventListener("load", function() { // blocked by browser bc it's intrusive
+//     audio.play()
+//         .then(() => {
+//             console.log("Audio played successfully");
+//         })
+//         .catch((error) => {
+//             console.error("Error playing audio:", error);
+//         });
+// });
+
+const playAudioButton = document.getElementById("playAudio");
+
+playAudioButton.addEventListener("click", function() {
+    // Check if the audio is paused, and if so, play it
+    if (audio.paused) {
+        audio.play()
+            .then(() => {
+                console.log("Audio played successfully");
+            })
+            .catch((error) => {
+                console.error("Error playing audio:", error);
+            });
+    }
+});
+
+
+
     // Feed the Tamagotchi, decreasing hunger
 function getHungry() {
     newPet.hunger--;
@@ -25,11 +58,12 @@ function getHungry() {
     } else if(newPet.hunger === 0){
         alert(`${petName} starved to death :C `)
         gameOver()
-    } else if (newPet.hunger >9){
-        document.getElementById("foodButton").style.cursor = "not-allowed"
-        document.getElementById("foodButton").style.background = "rgb(67, 67, 67)"
-        document.getElementById("foodButton").style.pointerEvent = "none"
-    }
+    } 
+    // else if (newPet.hunger >9){
+    //     document.getElementById("foodButton").style.cursor = "not-allowed"
+    //     document.getElementById("foodButton").style.background = "rgb(67, 67, 67)"
+    //     document.getElementById("foodButton").style.pointerEvent = "none"
+    // }
 } setInterval(getHungry, 3000)
 
 // Put the Tamagotchi to sleep, decreasing sleepiness
@@ -102,7 +136,6 @@ function evolvePet(){
 
 function gameOver(){
     window.location.href = "gameover.html";
-    // document.location.replace("/Users/shactrix/Desktop/sei-821/projects/tamagotchi/gameover.html")
 }
 
 })

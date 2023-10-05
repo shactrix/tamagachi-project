@@ -15,9 +15,9 @@ playAudioButton.addEventListener("click", function() {
     }
 });
 
-const playAgainButton = document.getElementById("playAgain")
-playAgainButton.addEventListener("click", playAgain) 
+const playButton = document.getElementById("playGame")
+playButton.addEventListener("click", playGame) 
 
-function playAgain(){
+function playGame(){
     window.location.href = "index.html";
 }
