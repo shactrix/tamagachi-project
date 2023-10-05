@@ -110,7 +110,8 @@ img.blastoise{
     }
     100% {
     transform: translateX(100px);
-    }
+    } 
+    /* animates images */
 }
 
 #buttons{
