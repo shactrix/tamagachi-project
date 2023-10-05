@@ -57,7 +57,7 @@ function getHungry() {
     document.getElementById("foodLevel").innerHTML = newPet.hunger //filling in the new hunger lvl in html
     if (newPet.hunger === 5) {
         alert('FEED ME!') //alerts if hunger has reached 5
-    } else if(newPet.hunger === 0){
+    } else if(newPet.hunger <= 0){
         alert(`${petName} starved to death :C `)
         gameOver() //dies if reached 0
     } 
@@ -73,9 +73,13 @@ function getSleepy() {
     newPet.sleepiness--;
     document.getElementById("sleepLevel").innerHTML = newPet.sleepiness
     if (newPet.sleepiness === 5) {
+        
         alert(`I'm tired of this grandpa!!!`)
-    } else if(newPet.sleepiness === 0){
+        let tiredAudio = document.getElementById("tiredAudio")
+        tiredAudio.play()
+    } else if(newPet.sleepiness <= 0){
         alert(`${petName} died of exhaustion :C `)
+        gameOver() //dies if reached 0
     }
 } setInterval(getSleepy, 3000)
 
@@ -85,8 +89,9 @@ function getBored() {
     document.getElementById("boredLevel").innerHTML = newPet.boredom
     if (newPet.boredom === 5) {
         alert('I am so very very very bored.')
-    } else if(newPet.boredom === 0){
+    } else if(newPet.boredom <= 0){
         alert(`${petName} died of boredom :C `)
+        gameOver() //dies if reached 0
     }
 } setInterval(getBored, 3000)
 

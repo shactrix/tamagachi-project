@@ -39,6 +39,10 @@ h1 {
     text-align: center;
 }
 
+#playAgain {
+    font-size: 25px;
+}
+
 @keyframes blink {
     0%{color: red;}
     50%{color: white;}

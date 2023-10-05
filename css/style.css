@@ -67,24 +67,50 @@ li{
 }
 
 img.squirtle{
+    margin-left: -20%;
+    margin-top: 390px;
     max-width: 200px;
     visibility: visible;
     z-index: 0;
     position: fixed;
+    left:480px;top:-20px;
+    animation:img 5s infinite;
 }
 
 img.wartortle{
+    margin-left: -20%;
+    margin-top: 390px;
     max-width: 380px;
     visibility: hidden;
     z-index: 0;
     position: fixed;
+    left:480px;top:-20px;
+    animation:img 5s infinite;
 }
 
 img.blastoise{
-    max-width: 300px;
+    margin-left: -20%;
+    margin-top: 390px;
+    max-width: 500px;
     visibility: hidden;
     z-index: 0;
     position: fixed;
+    left:480px;top:-20px;
+    animation:img 5s infinite;
+}
+@keyframes img{
+    0% {
+        transform: translateX(100px) rotateY(0deg);
+    }
+    49% {
+    transform: translateX(500px);
+    }
+    50% {
+    transform: translateX(500px) rotateY(360deg);
+    }
+    100% {
+    transform: translateX(100px);
+    }
 }
 
 #buttons{
