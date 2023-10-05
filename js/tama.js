@@ -57,6 +57,8 @@ function getHungry() {
     document.getElementById("foodLevel").innerHTML = newPet.hunger //filling in the new hunger lvl in html
     if (newPet.hunger === 5) {
         alert('FEED ME!') //alerts if hunger has reached 5
+        let breadAudio = document.getElementById("breadAudio")
+        breadAudio.play()
     } else if(newPet.hunger <= 0){
         alert(`${petName} starved to death :C `)
         gameOver() //dies if reached 0
@@ -89,6 +91,8 @@ function getBored() {
     document.getElementById("boredLevel").innerHTML = newPet.boredom
     if (newPet.boredom === 5) {
         alert('I am so very very very bored.')
+        let havingFunAudio = document.getElementById("havingFunAudio")
+        havingFunAudio.play()
     } else if(newPet.boredom <= 0){
         alert(`${petName} died of boredom :C `)
         gameOver() //dies if reached 0
