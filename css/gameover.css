@@ -19,6 +19,12 @@ body {
     left: 10px;
 }
 
+#stopAudioButton {
+    position: absolute;
+    top: 35px;
+    left: 10px;
+}
+
 h1 {
     font-size: 80px;
     text-align: center;

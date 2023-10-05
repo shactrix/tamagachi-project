@@ -2,9 +2,12 @@
 
 body {
     font-family: 'Chakra Petch', sans-serif;
-    color: green;
+    color: cyan;
     background-image: url(/assets/start.jpg);
-    background-size: cover;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: darkgreen;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,18 +22,37 @@ body {
     left: 10px;
 }
 
+#stopAudioButton {
+    position: absolute;
+    top: 35px;
+    left: 10px;
+}
+
 h1 {
     font-size: 80px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 30px;
     animation-name: blink;
     animation-duration: 1s;
     animation-iteration-count: infinite;
-    margin-bottom: 340px; /* Remove margin to place h1 at the top of the window */
+    margin-bottom: 220px; /* Remove margin to place h1 at the top of the window */
+}
+
+p {
+    width: 60%;
+    color: darkblue;
+    text-align: center;
+    font-family: 'Pixelify Sans', cursive;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .play {
     text-align: center;
+}
+
+#playGame {
+    font-size: 25px;
 }
 
 /* @keyframes blink {
